@@ -17,7 +17,7 @@ include_once 'manual/en/updates.php';
 </p>
 </div>
 <?php
-// $RIGHT_SIDEBAR_DATA = ob_get_clean();
+$RIGHT_SIDEBAR_DATA = ob_get_clean();
 
 $SIDEBAR_DATA = <<< EOF
 <h3>What is PHP-GTK?</h3>
