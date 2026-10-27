@@ -1,109 +1,203 @@
 <?php
-
-commonHeader('Downloads');
-
+session_start(); 
+error_reporting(E_ALL);
+ini_set("display_errors", 1);
+require_once("includes/setdefaultpage.php");
+userlanguage();
+require("language/".$_SESSION['language']."/download.php");
+$header=explode(":",DEFAULTHEADER);
+defaultheader($header[0],$header[1],$header[2],$header[3]);
 ?>
+<body>
+<?php defaulttop(); ?>
+<header class="w3-container w3-teal">
+  <h1><?php echo WELCOME;?></h1>
+</header>
+<div class="w3-center">    
+  <div class="w3-row"><br/>
+    <article class="w3-col m10 w3-container">
+    <h1><?php echo TITLE1;?></h1>
 
-<h1>Download</h1>
+<p class="w3-justify"><?php echo TEXT1;?></p>
+<table class="w3-table w3-bordered w3-striped w3-border w3-hoverable w3-striped w3-center">
+<thead class="w3-light-blue w3-center">
+  <tr >
+  <th class="w3-center"><?php echo TH1;?></th>
+  <th class="w3-center"><?php echo TH2;?></th>
+  <th class="w3-center"><?php echo TH3;?></th>
+  <th class="w3-center"><?php echo TH4;?></th>
+  <th class="w3-center"><?php echo TH5;?></th>
+  <th class="w3-center"><?php echo TH6;?></th>
+  <th class="w3-center"><?php echo TH7;?></th>
+ 
+</tr>
+</thead>
+<tr class="w3-center">
+  <td class="w3-center">PHP-GTK-2.0.1</td>
+  <td class="w3-center">PHP 5.5</td>
+  <td class="w3-center">GTK+ 2.24.10</td>
+  <td class="w3-center"><a href="distributions/PHP55-GTK2.zip" download><i class="material-icons">&#xE884;</i></a></td>
+  <td class="w3-center">-</td>
+  <td class="w3-center"><?php echo BETA;?></td>
+  <td class="w3-center">2015-01-15</td>
+  
+</tr>
+<tr>
+  <td class="w3-center">PHP-GTK-2.0.1</td>
+  <td class="w3-center">PHP 5.4</td>
+  <td class="w3-center">GTK+ 2.24.10</td>
+  <td class="w3-center"><a href="distributions/PHP54-GTK2.zip" download><i class="material-icons">&#xE884;</i></a></td>
+  <td class="w3-center">-</td>
+  <td class="w3-center"><?php echo BETA;?></td>
+  <td class="w3-center">2015-01-15</td>
+  
+</tr>
+<tr>
+  <td class="w3-center">PHP-GTK-2.0.1</td>
+  <td class="w3-center">PHP 5.1.x - 5.5</td>
+  <td class="w3-center">GTK+ 2.x</td>
+  <td class="w3-center">-</td>
+  <td class="w3-center"><a href="https://github.com/php/php-gtk-src/archive/master.zip" download><i class="material-icons">&#xE884;</i></a></td>
+  <td class="w3-center"><?php echo STABLE;?></td>
+  <td class="w3-center">2015-01-15</td>
+  
+</tr>
+<tr>
+  <td class="w3-center">PHP-GTK-2.0.1 binary pack</td>
+  <td class="w3-center">PHP 5.2.6</td>
+  <td class="w3-center">GTK+ 2.12.9</td>
+  <td class="w3-center"><a href="distributions/php-gtk-2.0.1-win32-nts.zip" download><i class="material-icons">&#xE884;</i></a></td>
+  <td class="w3-center">-</td>
+  <td class="w3-center"><?php echo STABLE;?></td>
+  <td class="w3-center">2008-05-16</td>
+  
+</tr>
+<tr>
+<td class="w3-center">PHP-GTK-2.0.1 binary extensions pack</td>
+  <td class="w3-center">PHP 5.2.6</td>
+  <td class="w3-center">GTK+ 2.12.9</td>
+  <td class="w3-center"><a href="distributions/php-gtk-2.0.1-win32-extensions.zip" download><i class="material-icons">&#xE884;</i></a></td>
+  <td class="w3-center">-</td>
+  <td class="w3-center"><?php echo STABLE;?></td>
+  <td class="w3-center">2008-05-16</td>
+  
+</tr>
+<tr>
+  <td class="w3-center">PHP-GTK-2.0.1</td>
+  <td class="w3-center">PHP 5.2.6</td>
+  <td class="w3-center">GTK+ 2.12.9</td>
+  <td class="w3-center">-</td>
+  <td class="w3-center"><a href="distributions/php-gtk-2.0.1.tar.gz" download><i class="material-icons">&#xE884;</i></a></td>
+  <td class="w3-center"><?php echo STABLE;?></td>
+  <td class="w3-center">2008-05-16</td>
+  
+</tr>
+<tr>
+<td class="w3-center">PHP-GTK-2.0.0 binary pack</td>
+  <td class="w3-center">PHP 5.2.5</td>
+  <td class="w3-center">GTK+ 2.12.8</td>
+  <td class="w3-center"><a href="distributions/php-gtk-2.0.0-win32-nts.zip" download><i class="material-icons">&#xE884;</i></a></td>
+  <td class="w3-center">-</td>
+  <td class="w3-center"><?php echo STABLE;?></td>
+  <td class="w3-center">2008-02-29</td>
+  
+</tr>
+<tr>
+  <td class="w3-center">PHP-GTK-2.0.0</td>
+  <td class="w3-center">PHP 5.2.5</td>
+  <td class="w3-center">GTK+ 2.12.8</td>
+  <td class="w3-center">-</td>
+  <td class="w3-center"><a href="distributions/php-gtk-2.0.0.tar.gz" download><i class="material-icons">&#xE884;</i></a></td>
+  <td class="w3-center"><?php echo STABLE;?></td>
+  <td class="w3-center">2008-02-29</td>
+  
+</tr>
+</table>
+<br/>    
+<h1><?php echo TITLE2;?></h1>    
+<p class="w3-justify"><?php echo TEXT2;?></p>
+<table class="w3-table w3-bordered w3-striped w3-border w3-hoverable w3-striped w3-center">
+<thead class="w3-light-blue w3-center">
+  <tr >
+  <th class="w3-center"><?php echo TH1;?></th>
+  <th class="w3-center"><?php echo TH2;?></th>
+  <th class="w3-center"><?php echo TH3;?></th>
+  <th class="w3-center"><?php echo TH4;?></th>
+  <th class="w3-center"><?php echo TH5;?></th>
+  <th class="w3-center"><?php echo TH6;?></th>
+  <th class="w3-center"><?php echo TH7;?></th>
+  
+</tr>
+</thead>
+<tr>
+  <td class="w3-center">php-gtk-1.0.2</td>
+  <td class="w3-center">4.4.1-dev</td>
+  <td class="w3-center">GTK+ 1.2.x</td>
+  <td class="w3-center"><a href="distributions/php-gtk-1.0.2-win32.zip" download><i class="material-icons">&#xE884;</i></a></td>
+  <td class="w3-center">-</td>
+  <td class="w3-center"><?php echo STABLE;?></td>
+  <td class="w3-center">2005-07-15</td>
+  
+</tr>
+<tr>
+<td class="w3-center">php-gtk-1.0.2</td>
+  <td class="w3-center">4.4.1-dev</td>
+  <td class="w3-center">GTK+ 1.2.x</td>
+  <td class="w3-center">-</td>
+  <td class="w3-center"><a href="distributions/php-gtk-1.0.2.tar.gz" download><i class="material-icons">&#xE884;</i></a></td>
+  <td class="w3-center"><?php echo STABLE;?></td>
+  <td class="w3-center">2005-07-15</td>
+  
+</tr>
+<tr>
+  <td class="w3-center">php-gtk-1.0.1a</td>
+  <td class="w3-center">4.3.9-dev</td>
+  <td class="w3-center">GTK+ 1.2.x</td>
+  <td class="w3-center"><a href="distributions/php-gtk-1.0.1a-win32.zip" download><i class="material-icons">&#xE884;</i></a></td>
+  <td class="w3-center">-</td>
+  <td class="w3-center"><?php echo STABLE;?></td>
+  <td class="w3-center">2004-08-25</td>
+  
+</tr>
+<tr>
+<td class="w3-center">php-gtk-1.0.1</td>
+  <td class="w3-center">4.3.9-dev</td>
+  <td class="w3-center">GTK+ 1.2.x</td>
+  <td class="w3-center">-</td>
+  <td class="w3-center"><a href="distributions/php-gtk-1.0.1.tar.gz" download><i class="material-icons">&#xE884;</i></a></td>
+  <td class="w3-center"><?php echo STABLE;?></td>
+  <td class="w3-center">2004-08-25</td>
+  
+</tr>
+<tr>
+<td class="w3-center">php-gtk-1.0.0</td>
+  <td class="w3-center">4.3.4RC3-dev</td>
+  <td class="w3-center">GTK+ 1.2.x</td>
+  <td class="w3-center"><a href="distributions/php-gtk-1.0.0-win32.zip" download><i class="material-icons">&#xE884;</i></a></td>
+  <td class="w3-center">-</td>
+  <td class="w3-center"><?php echo STABLE;?></td>
+  <td class="w3-center">2003-10-23</td>
+  
+</tr>
+</table>
 
-<h2>PHP-GTK 2</h2>
+<h1><?php echo TITLE3;?></h1>        
+<p class="w3-justify"><?php echo TEXT3;?>
 
-<p>
-<b>GTK+ version:</b>
-<br />
-PHP-GTK 2 currently supports GTK+ 2.6.9 or greater. You can obtain the latest
-stable release of GTK+ 2.x from <?php print_link('ftp://ftp.gtk.org/pub/gtk/'); ?>.
-</p>
-<p>
-<b>PHP version:</b>
-<br />
-PHP-GTK 2 requires PHP 5.1.x or greater. The latest version of
-the PHP_5_2 branch in CVS will work, too.
-</p>
 
-<ul>
-<li><?php print_link('http://gtk.php.net/do_download.php?download_file=php-gtk-2.0.1.tar.gz', 'php-gtk-2.0.1 Source'); ?> - 15-May-2008</li>
-<li><?php print_link('http://gtk.php.net/do_download.php?download_file=php-gtk-2.0.1-win32-nts.zip', 'php-gtk-2.0.1 Windows binary pack'); ?> - 16-May-2008</li>
-<li><?php print_link('http://gtk.php.net/do_download.php?download_file=php-gtk-2.0.1-win32-extensions.zip', 'php-gtk-2.0.1 Windows binary extensions pack'); ?> - 16-May-2008</li>
-</ul>
-
-<ul>
-<li><?php print_link('http://gtk.php.net/do_download.php?download_file=php-gtk-2.0.0.tar.gz', 'php-gtk-2.0.0 Source for Gtk+ 2.6 upwards'); ?> - 29-Feb-2008</li>
-<li><?php print_link('http://gtk.php.net/do_download.php?download_file=php-gtk-2.0.0-win32-nts.zip', 'php-gtk-2.0.0 Windows binary pack'); ?> - 29-Feb-2008</li>
-</ul>
-
-<hr />
-
-<h2>PHP-GTK 1</h2>
-
-<p>
-<b>GTK+ version:</b>
-<br />
-PHP-GTK 1 currently supports GTK+ 1.2.6 or greater. You can obtain the
-latest stable release of GTK+ 1.2.x from
-<?php print_link('ftp://ftp.gtk.org/pub/gtk/v1.2/'); ?>.
-</p>
-<p>
-<b>PHP version:</b>
-<br />
-PHP-GTK 1 requires PHP 4.0.5 or greater, with versions from
-1.0.1 up requiring PHP 4.3.x to build.
-</p>
-
-<ul>
-<li><?php print_link('http://gtk.php.net/do_download.php?download_file=php-gtk-1.0.2.tar.gz', 'php-gtk-1.0.2 Source'); ?> - 15-Jul-2005</li>
-<li><?php print_link('http://gtk.php.net/do_download.php?download_file=php-gtk-1.0.1.tar.gz', 'php-gtk-1.0.1 Source'); ?> - 09-Aug-2004</li>
-<li><?php print_link('http://gtk.php.net/do_download.php?download_file=php-gtk-1.0.2-win32.zip', 'php-gtk-1.0.2 Windows and PHP Binaries'); ?> - 15-Jul-2005</li>
-<li><?php print_link('http://gtk.php.net/do_download.php?download_file=php-gtk-1.0.1a-win32.zip', 'php-gtk-1.0.1a Windows and PHP Binaries'); ?> - 25-Aug-2004</li>
-<li><?php print_link('http://gtk.php.net/do_download.php?download_file=php-gtk-1.0.0-win32.zip', 
-	'php-gtk-1.0.0 Windows and PHP Binaries including ComboButton, Extra, libGlade, Scintilla, Spaned, SQPane'); ?> - 23-Oct-2003</li>
-</ul>
-
-<hr />
-
-<h2>CVS Version</h2>
-
-<p>
-Alternatively, you can get the latest and greatest 
-version of PHP-GTK directly from the PHP SVN server.
-</p>
-
-<ol>
-
-<li>
-Obtain the PHP-GTK tree.
-<br />
-<br />For PHP-GTK 2:
-<pre>
-svn co http://svn.php.net/repository/gtk/php-gtk/trunk php-gtk
-</pre>
-For PHP-GTK 1:
-<pre>
-svn co http://svn.php.net/repository/gtk/php-gtk/branches/PHP_GTK_1 php-gtk
-</pre>
-</li>
-
-<li>
-cd into the source tree:
-<pre>
-cd php-gtk
-</pre>
-</li>
-
-<li>
-Configure and install:
-<pre>
-./buildconf
-./configure
-make
-make install
-</pre>
-</li>
-
-</ol>
-
+<p class="w3-justify"><?php echo TEXT4;?></p>
+</article>
+    <aside>
+    <nav class="w3-col m2 w3-light-grey">
+<?php defaultmenuright();?>
+    </nav>
+    </aside>
+    
+  </div>
+</div>
+<footer class="w3-container w3-small w3-teal">
+  <p><?php echo FOOTER;?></p>
+</footer>
 <?php
-
-commonFooter();
-
+defaultfooter();
 ?>
